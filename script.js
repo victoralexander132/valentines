@@ -7,10 +7,9 @@ function handleYes() {
 }
 
 function handleNo() {
-    const noBtn = document.querySelector('.no-btn');
     const response = document.getElementById('response');
     
-    // Change button text
+    // Change response text
     const responses = [
         'Are you sure? 🥺',
         'Please? 💝',
@@ -21,13 +20,6 @@ function handleNo() {
     
     const randomResponse = responses[Math.floor(Math.random() * responses.length)];
     response.innerHTML = randomResponse;
-    
-    // Make the "No" button move around
-    const x = Math.random() * (window.innerWidth - 200);
-    const y = Math.random() * (window.innerHeight - 100);
-    noBtn.style.position = 'fixed';
-    noBtn.style.left = x + 'px';
-    noBtn.style.top = y + 'px';
 }
 
 function createFloatingHearts() {
